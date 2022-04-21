@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "53e1d2de-e853-449c-a419-8a4e2860fcaf",
+		"name": "Auth-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"admin\",\r\n    \"password\": \"welcome\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1MDU3OTI0MSwiaWF0IjoxNjUwNTYxMjQxfQ.H9WWUW2FNy-jitA084PNqh3Q3XshspKWfgaAMG2kuG1gDOWB84u2-KJuWDXQGjQEqBaSLJaqN6jyoMa597M1qQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/welcome",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

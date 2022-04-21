@@ -1,0 +1,9 @@
+server:
+  port: 9090
+
+jwt:
+  secret: secret-string
+
+app:
+  userName: admin
+  password: welcome
